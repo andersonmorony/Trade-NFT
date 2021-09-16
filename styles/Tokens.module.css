@@ -1,0 +1,9 @@
+.container{}
+
+.badge{
+    margin-top: 10px;
+}
+.badge button{
+    margin-right: 10px;
+    padding: 10px;
+}
