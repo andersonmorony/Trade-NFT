@@ -6,6 +6,7 @@ let marketAddress;
 let nft;
 
 beforeEach( async () =>{
+
   const Market = await ethers.getContractFactory("NFTMarket");
   market = await Market.deploy();
   await market.deployed();
@@ -106,9 +107,14 @@ describe("Market", () => {
     
   })
 
-  it('should sold a item', async () => {
+  it('should sold a item and owner received the listing price', async () => {
+
+    const [owner] = await ethers.getSigners();
+    const provider = await ethers.provider;
+    const ownerBalance = await provider.getBalance(owner.address);
+
     let listPrice = await market.getListingPrice();
-    const itemPrice = ethers.utils.parseUnits('1', 'ether')
+    const itemPrice = ethers.utils.parseUnits('10', 'ether')
     await nft.createToken('https://www.youtube.com/watch?v=1v_-9n-QDyY');
     await market.createMarketItem(nft.address, 1, itemPrice, "music", { value: listPrice.toString() });
 
@@ -116,7 +122,11 @@ describe("Market", () => {
       
     await market.connect(buyerAddress).createMarketSale(nft.address, 1, { value: itemPrice })
     const tokens = await market.connect(buyerAddress).fetchMyNFTs();
+    
+    const ownerBalanceAfter = await provider.getBalance(owner.address);
+    
     expect(tokens.length).to.equal(1);
+    assert.notEqual(ownerBalance, ownerBalanceAfter, 'These numbers are not equal');
 
   })
 
