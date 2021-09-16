@@ -42,7 +42,7 @@ describe("Market", () => {
     let listPrice = await market.getListingPrice();
     const itemPrice = ethers.utils.parseUnits('1', 'ether')
     await nft.createToken('https://www.youtube.com/watch?v=1v_-9n-QDyY');
-    await market.createMarketItem(nft.address, 1, itemPrice, "music", { value: listPrice.toString() });
+    await market.createMarketItem(nft.address, 1, itemPrice, "music", "brega", "Victor Fernandez", { value: listPrice.toString() });
     const tokens = await market.fetchMarketItems();
         
     const items = await Promise.all(tokens.map(async (item) => {
@@ -56,6 +56,8 @@ describe("Market", () => {
         price: item.price.toString(),
         sold: item.sold,
         category: item.category,
+        kind: item.kind,
+        artist: item.artist,
         tokenUri
       }
       return newItem
@@ -64,15 +66,17 @@ describe("Market", () => {
     expect(items[0].tokenUri).to.equal('https://www.youtube.com/watch?v=1v_-9n-QDyY');
     expect(items[0].price).to.equal(itemPrice);
     expect(items[0].category).to.equal('music');
+    expect(items[0].kind).to.equal('brega');
+    expect(items[0].artist).to.equal('Victor Fernandez');
   });
 
   it('should return my items created', async () => {
     let listPrice = await market.getListingPrice();
     const itemPrice = ethers.utils.parseUnits('1', 'ether')
     await nft.createToken('https://www.youtube.com/watch?v=1v_-9n-QDyY');
-    await market.createMarketItem(nft.address, 1, itemPrice, "music", { value: listPrice.toString() });
+    await market.createMarketItem(nft.address, 1, itemPrice, "music", "brega", "Victor Fernandez", { value: listPrice.toString() });
 
-    const tokens = await market.fecthItemsCreated();
+    const tokens = await market.fetchItemsCreated();
 
     expect(tokens.length).to.equal(1);
   });
@@ -81,7 +85,7 @@ describe("Market", () => {
     let listPrice = await market.getListingPrice();
     const itemPrice = ethers.utils.parseUnits('1', 'ether')
     await nft.createToken('https://www.youtube.com/watch?v=1v_-9n-QDyY');
-    await market.createMarketItem(nft.address, 1, itemPrice, "music", { value: listPrice.toString() });
+    await market.createMarketItem(nft.address, 1, itemPrice, "music", "brega", "Victor Fernandez", { value: listPrice.toString() });
 
     const tokens = await market.fetchMyNFTs();
 
@@ -92,7 +96,7 @@ describe("Market", () => {
     let listPrice = await market.getListingPrice();
     const itemPrice = ethers.utils.parseUnits('1', 'ether')
     await nft.createToken('https://www.youtube.com/watch?v=1v_-9n-QDyY');
-    await market.createMarketItem(nft.address, 1, itemPrice, "music", { value: listPrice.toString() });
+    await market.createMarketItem(nft.address, 1, itemPrice, "music", "brega", "Victor Fernandez", { value: listPrice.toString() });
 
     const [_, buyerAddress] = await ethers.getSigners()
     try{
@@ -116,7 +120,7 @@ describe("Market", () => {
     let listPrice = await market.getListingPrice();
     const itemPrice = ethers.utils.parseUnits('10', 'ether')
     await nft.createToken('https://www.youtube.com/watch?v=1v_-9n-QDyY');
-    await market.createMarketItem(nft.address, 1, itemPrice, "music", { value: listPrice.toString() });
+    await market.createMarketItem(nft.address, 1, itemPrice, "music", "brega", "Victor Fernandez", { value: listPrice.toString() });
 
     const [_, buyerAddress] = await ethers.getSigners()
       
