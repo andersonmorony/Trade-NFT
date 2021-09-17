@@ -16,7 +16,7 @@
   color: #010101;
 }
 .boxText h5 {
-  color: #666;
+  color: rgb(182, 182, 182) !important;
 }
 
 .boxImage {
@@ -24,7 +24,6 @@
 }
 .iconPrincipal{
   font-size: 15em;
-  color: black;
 }
 
 .btnSeeMore {
@@ -55,10 +54,6 @@
 }
 .cardBody small {
   color: #010101 !important;
-}
-.cardFeature {
-  box-shadow: 2px -5px 30px 1px rgba(0, 0, 0, .3);
-  border-radius: 15px;
 }
 .cardBodyFeature p{
   font-size: 14px;

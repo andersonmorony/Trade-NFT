@@ -39,7 +39,7 @@ export default function Menu() {
           </ul>
         </div>
         <form className="d-flex">
-        <button className="btn btn-outline-dark center" type="submit"><img src="/metamask.svg" width="30px" /> Connect to wallet</button>
+        <button className="btn btn-dark center" type="submit"><img src="/metamask.svg" width="30px" /> Connect to wallet</button>
       </form>
       </div>
     </nav>

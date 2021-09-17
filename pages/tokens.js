@@ -13,11 +13,11 @@ export default function Tokens() {
           />
         </div>
         <div className={`row-inline ${styles.badge}`}>
-            <button class="badge btn bg-light text-dark">Tudo</button>
-            <button class="badge btn bg-light text-dark">Funk</button>
-            <button class="badge btn bg-light text-dark">Hap</button>
-            <button class="badge btn bg-light text-dark">Brega</button>
-            <button class="badge btn bg-light text-dark">Sertanejo</button>
+            <button class="badge btn btn-primary text-light">Tudo</button>
+            <button class="badge btn btn-primary text-light">Funk</button>
+            <button class="badge btn btn-primary text-light">Hap</button>
+            <button class="badge btn btn-primary text-light">Brega</button>
+            <button class="badge btn btn-primary text-light">Sertanejo</button>
         </div>
       </div>
       <hr />
@@ -30,7 +30,7 @@ export default function Tokens() {
             className={`row row-cols-1 row-cols-md-4 g-3 float-start ${styles.featureItems}`}
           >
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -61,7 +61,7 @@ export default function Tokens() {
               </div>
             </div>
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -93,7 +93,7 @@ export default function Tokens() {
               </div>
             </div>
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -124,7 +124,7 @@ export default function Tokens() {
               </div>
             </div>
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -159,7 +159,7 @@ export default function Tokens() {
             className={`row row-cols-1 row-cols-md-4 g-3 float-start ${styles.featureItems}`}
           >
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -190,7 +190,7 @@ export default function Tokens() {
               </div>
             </div>
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -222,7 +222,7 @@ export default function Tokens() {
               </div>
             </div>
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"
@@ -253,7 +253,7 @@ export default function Tokens() {
               </div>
             </div>
             <div className="col">
-              <div className={`card h-100 ${styles.cardFeature}`}>
+              <div className={`card h-100  card-token ${styles.cardFeature}`}>
                 <iframe
                   width="auto"
                   height="175"

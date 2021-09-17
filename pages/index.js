@@ -13,10 +13,10 @@ export default function Home() {
             Now you can create token with you favorite music and to be fan
             number #1
           </h5>
-          <button type="button" className="btn btn-dark">
+          <button type="button" className="btn btn-lg btn-light">
             Explore
           </button>
-          <button type="button" className="btn btn-light">
+          <button type="button" className="btn btn-lg  btn-dark">
             Create
           </button>
         </div>
@@ -43,14 +43,14 @@ export default function Home() {
       </p>
       <button
         type="button"
-        className={`btn btn-light float-end ${styles.btnSeeMore}`}
+        className={`btn btn-primary float-end ${styles.btnSeeMore}`}
       >
         See more <i className="bi bi-arrow-right"></i>
       </button>
 
       <div className={`row row-cols-1 row-cols-md-4 g-3 float-start ${styles.featureItems}`}>
         <div className="col">
-          <div className={`card h-100 ${styles.cardFeature}`}>
+          <div className={`card h-100  card-token ${styles.cardFeature}`}>
             <iframe
               width="auto"
               height="175"
@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col">
-          <div className={`card h-100 ${styles.cardFeature}`}>
+          <div className={`card h-100  card-token ${styles.cardFeature}`}>
             <iframe
               width="auto"
               height="175"
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col">
-          <div className={`card h-100 ${styles.cardFeature}`}>
+          <div className={`card h-100  card-token ${styles.cardFeature}`}>
             <iframe
               width="auto"
               height="175"
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col">
-          <div className={`card h-100 ${styles.cardFeature}`}>
+          <div className={`card h-100  card-token ${styles.cardFeature}`}>
             <iframe
               width="auto"
               height="175"
@@ -182,7 +182,7 @@ export default function Home() {
         <p className="float-start"><img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/34/000000/external-first-success-flatart-icons-lineal-color-flatarticons.png"/> Top Artists</p>
         <button
           type="button"
-          className={`btn btn-light float-end ${styles.btnSeeMore}`}
+          className={`btn btn-primary float-end ${styles.btnSeeMore}`}
         >
           See more <i className="bi bi-arrow-right"></i>
         </button>
