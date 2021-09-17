@@ -7,3 +7,24 @@
     margin-right: 10px;
     padding: 10px;
 }
+
+.filter {
+    padding-right: 40px;
+}
+.filter input, .filter select{
+    padding: 8px !important;
+    background-color: #15134a !important;  
+    box-shadow: 2px -5px 20px 1px rgba(59, 59, 59, 0.1);
+    border: none !important;
+    color: #e4e4e6 !important;
+    margin-top: 7px;
+}
+
+.filter button{
+    margin-top: 20px;
+}
+
+.tokens{
+    border-left: 3px solid #15134a;
+    padding-left: 20px;
+}
