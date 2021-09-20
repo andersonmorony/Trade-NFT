@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.css";
+import Link from 'next/link'
 
 export default () => {
   return (
@@ -7,14 +8,18 @@ export default () => {
       <div className={`container-fluid float-start ${styles.footer}`}>
         <div className="row">
           <div className={`col-12 ${styles.logo}`}>
-            <i class="bi bi-collection-play-fill"></i>
+          <Link href="/">
+           <a> <i class="bi bi-collection-play-fill"></i></a>
+           </Link>
           </div>
           <div className="col-sm-12">
             <ul class="nav">
               <li class="nav-item">
+              <Link href="/tokens">
                 <a class="nav-link active" aria-current="page" href="#">
                   Explore
                 </a>
+              </Link>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">

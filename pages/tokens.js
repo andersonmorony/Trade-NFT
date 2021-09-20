@@ -24,7 +24,7 @@ export default function Tokens() {
 
       <div className={`container ${styles.containerTokens}`}>
         <div className={`col-lg-2 float-start ${styles.filter}`}>
-          <h5>Filter</h5>
+          <h5><i class="bi bi-funnel"></i> Filter</h5>
           <form className="form">
             <div className="form-group">
               <label for="">Price</label>

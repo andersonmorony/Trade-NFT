@@ -1,0 +1,17 @@
+.card{
+    padding: 10px !important;
+    text-align: center;
+    margin: 0 auto !important;
+    background: #351c6e; 
+    /* background: -moz-linear-gradient(to right,  #15134a 1%,#2a1755 50%,#351c6e 100%);
+    background: -webkit-linear-gradient(to left,  #15134a 1%,#2a1755 50%,#351c6e 100%);
+    background: linear-gradient(to left,  #15134a 1%,#2a1755 50%,#351c6e 100%); */
+    border: none !important;
+    border-radius: 15px;
+}
+.account{
+    background: #15134a !important;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 10px;
+}

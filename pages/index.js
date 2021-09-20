@@ -1,7 +1,10 @@
-import React from "react";
-import styles from "../styles/Home.module.css";
+import React from "react"
+import styles from "../styles/Home.module.css"
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
+  
   return (
     <>
       <div className={`row ${styles.rowHome}`}>
@@ -13,7 +16,7 @@ export default function Home() {
             Now you can create token with you favorite music and to be fan
             number #1
           </h5>
-          <button type="button" className="btn btn-lg btn-light">
+          <button type="button" onClick={() => router.push('/tokens')} className="btn btn-lg btn-light">
             Explore
           </button>
           <button type="button" className="btn btn-lg  btn-dark">
